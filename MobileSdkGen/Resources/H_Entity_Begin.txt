@@ -1,0 +1,5 @@
+
+@interface {!ENTITY_NAME} : Entity
+
++ (NSString *)entityLogicalName;
++ (NSNumber *)entityTypeCode;

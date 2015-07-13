@@ -1,0 +1,22 @@
+
+@implementation {!ENTITY_NAME}
+
++ (NSString *)entityLogicalName
+{
+	return @"{!ENTITY_LOGICALNAME}";
+}
+
++ (NSNumber *)entityTypeCode
+{
+	return [NSNumber numberWithInt:{!ENTITY_TYPECODE}];
+}
+
+- (NSUUID *)id
+{
+	return (NSUUID *)self.attributes[@"{!ENTITY_PRIMARYID}"];
+}
+
+- (void)setId:(NSUUID *)id
+{
+	self.attributes[@"{!ENTITY_PRIMARYID}"] = id;
+}

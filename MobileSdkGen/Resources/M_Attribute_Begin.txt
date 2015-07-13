@@ -1,0 +1,12 @@
+- ({!ATTRIBUTE_TYPE} *){!ATTRIBUTE_NAME} {
+	return ({!ATTRIBUTE_TYPE} *)self.attributes[@"{!ATTRIBUTE_LOGICALNAME}"];
+}
+
+- (void)set{!ATTRIBUTE_NAME_UPPER}:({!ATTRIBUTE_TYPE} *){!ATTRIBUTE_NAME} {
+	if ({!ATTRIBUTE_NAME}) {
+		self.attributes[@"{!ATTRIBUTE_LOGICALNAME}"] = {!ATTRIBUTE_NAME};
+	}
+	else {
+		self.attributes[@"{!ATTRIBUTE_LOGICALNAME}"] = [NSNull null];
+	}
+}

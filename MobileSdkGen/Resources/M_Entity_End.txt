@@ -1,0 +1,6 @@
+- (id)init
+{
+	return [super initWithLogicalName:@"{!ENTITY_LOGICALNAME}"];
+}
+
+@end

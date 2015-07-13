@@ -1,0 +1,48 @@
+@EntityLogicalNameAttribute("{!ENTITY_LOGICALNAME}")
+public class {!ENTITY_NAME} extends Entity {
+	
+	public static final String EntityLogicalName = "{!ENTITY_LOGICALNAME}";
+	public static final int EntityTypeCode = {!ENTITY_TYPECODE};
+	
+	public {!ENTITY_NAME}() {
+		super("{!ENTITY_LOGICALNAME}");
+	}
+
+	public static {!ENTITY_NAME} build() {
+		return new {!ENTITY_NAME}();
+	}
+
+	@AttributeSchemaNameAttribute("{!ENTITY_PRIMARYID_NAME}")
+	@AttributeLogicalNameAttribute("{!ENTITY_PRIMARYID_LOGICALNAME}")
+	public UUID get{!ENTITY_PRIMARYID_NAME}() {
+		return this.getAttributeValue("{!ENTITY_PRIMARYID_LOGICALNAME}");
+	}
+	
+	@AttributeSchemaNameAttribute("{!ENTITY_PRIMARYID_NAME}")
+	@AttributeLogicalNameAttribute("{!ENTITY_PRIMARYID_LOGICALNAME}")
+	public {!ENTITY_NAME} set{!ENTITY_PRIMARYID_NAME}(UUID value) {
+		this.setAttributeValue("{!ENTITY_PRIMARYID_LOGICALNAME}", value);
+		if (value != null) {
+			super.setId(value);
+		}
+		else {
+			super.setId(new UUID(0L, 0L));
+		}
+
+		return this;
+	}
+	
+	@Override
+	@AttributeSchemaNameAttribute("{!ENTITY_PRIMARYID_NAME}")
+	@AttributeLogicalNameAttribute("{!ENTITY_PRIMARYID_LOGICALNAME}")
+	public UUID getId() {
+		return super.getId();
+	}
+	
+	@Override
+	@AttributeSchemaNameAttribute("{!ENTITY_PRIMARYID_NAME}")
+	@AttributeLogicalNameAttribute("{!ENTITY_PRIMARYID_LOGICALNAME}")
+	public void setId(UUID value) {
+		this.set{!ENTITY_PRIMARYID_NAME}(value);
+	}
+	

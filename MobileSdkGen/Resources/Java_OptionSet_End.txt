@@ -1,0 +1,17 @@
+	private int mValue;
+
+	{!OPTIONSET_NAME}(int value) {
+		mValue = value;
+	}
+
+	public int getValue() {
+		return mValue;
+	}
+
+	public static {!OPTIONSET_NAME} toObject(int value) {
+		switch(value) {
+{!OPTIONSET_TO_OBJECT_CASES}			default: 
+				return null;
+		}
+	}
+}

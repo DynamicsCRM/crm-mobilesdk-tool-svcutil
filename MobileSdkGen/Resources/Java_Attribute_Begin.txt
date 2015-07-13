@@ -1,0 +1,12 @@
+	@AttributeSchemaNameAttribute("{!ATTRIBUTE_NAME_UPPER}")
+	@AttributeLogicalNameAttribute("{!ATTRIBUTE_LOGICALNAME}")
+	public {!ATTRIBUTE_TYPE} get{!ATTRIBUTE_NAME_UPPER}() {
+		return this.getAttributeValue("{!ATTRIBUTE_LOGICALNAME}");
+	}
+	
+	@AttributeSchemaNameAttribute("{!ATTRIBUTE_NAME_UPPER}")
+	@AttributeLogicalNameAttribute("{!ATTRIBUTE_LOGICALNAME}")
+	public {!ENTITY_NAME} set{!ATTRIBUTE_NAME_UPPER}({!ATTRIBUTE_TYPE} value) {
+		this.setAttributeValue("{!ATTRIBUTE_LOGICALNAME}", value);
+		return this;
+	}
