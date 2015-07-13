@@ -19,11 +19,14 @@ After building the tool, the MobileSdkGen.exe executable will reside in your bin
 Below is the command syntax.
 
 ```
-MobileSdkGen.exe -c "Url=[org root url]; Username=[username]; Password=[password]" -o [output file/folder name] -j -i -m [path to XML model file]```
+MobileSdkGen.exe -c "Url=[org root url]; Username=[username]; Password=[password]" -o [output file/folder name] -j -i -m [path to XML model file]
+```
 
 
 For example:
-```MobileSdkGen -c "Url=https://myorg.crm.dynamics.com/; Username=un; Password=pw" -o MyModel -j```
+```
+MobileSdkGen -c "Url=https://myorg.crm.dynamics.com/; Username=un; Password=pw" -o MyModel -j
+```
 
 #### Supported Command Arguments
 
@@ -67,7 +70,7 @@ The `-m` argument is used to specify an XML model file that identifies the entit
 
 The following XML code examples shows how to generate output for the complete Account entity, and only the 'contactid' and 'fullname' attributes of the Contact entity. All global option-sets are also included in the output.
 
-``` xml
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Entities.xsd"
     IncludeAllEntities="false" IncludeAllGlobalOptionSets="true">
@@ -85,7 +88,7 @@ The following XML code examples shows how to generate output for the complete Ac
 
 The schema for the XML model file is shown below. This schema is included in an XSD file named ModelFileSchema.xsd that is provided in this SDK.
 
-``` xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="Model">
